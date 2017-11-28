@@ -1,38 +1,36 @@
 /* Core Module */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
 
 /* Modules */
 import { HeaderModule } from './header/header.module';
 
 /* Components */
 import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 /* Routes */
 import { APP_ROUTES } from '../Routes/app.routes';
 
+/* Librairies */
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
 	declarations: [
 		AppComponent,
-		NotFoundComponent
+		FooterComponent,
+		NotFoundComponent,
 	],
 	imports: [
 		BrowserModule.withServerTransition({ appId: 'MParis' }),
 		APP_ROUTES,
 		HeaderModule,
+		AgmCoreModule.forRoot({
+			apiKey: 'AIzaSyAljfwWIIw8n2LhC2gZdRLC3JKCS1Y-V8M'
+		})
 	],
 	providers: [],
 	bootstrap: [AppComponent]
 })
-export class AppModule { 
-	constructor(@Inject(PLATFORM_ID) private platformId: Object,
-    			@Inject(APP_ID) private appId: string) {
-
-		const platform = isPlatformBrowser(platformId) ? 'on the server' : 'in the browser';
-		
-    	console.log(`Running ${platform} with appId=${appId}`);
-	}
-}
+export class AppModule {}

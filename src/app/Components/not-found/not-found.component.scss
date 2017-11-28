@@ -1,0 +1,55 @@
+@import '../../../public/styles/global.scss';
+@import '../../../../node_modules/hover.css/scss/hover.scss';
+
+#mp404 {
+	padding: 150px 100px 200px 100px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+	.mp-not-found-text {
+		text-align: center;
+
+		h1 {
+			font-family: 'Raleway';
+			font-weight: 600;
+			font-size: 240px;
+			color: #7C5594;
+		}
+
+		h2 {
+			font-family: 'Lato';
+			font-weight: normal;
+			font-size: 140px;
+			color: #D2D2D2;
+		}
+
+		h3 {
+			font-family: 'Lato';
+			font-weight: normal;
+			font-size: 60px;
+			color: #D2D2D2;
+			margin-bottom: 30px;
+		}
+
+		a {
+			padding: 15px 30px;
+			font-family: 'Lato';
+			font-size: 18px;
+			background-color: #7C5594;
+			color: #fff;
+
+			i {
+				margin-left: 5px;
+			}
+		}
+
+		.hvr-shutter-out-vertical::before {
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	img {
+		height: 450px;
+	}
+}

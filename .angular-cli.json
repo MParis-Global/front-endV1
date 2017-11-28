@@ -20,7 +20,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "public/styles/global.scss"
+        "public/styles/global.scss",
+        "../node_modules/hover.css/scss/hover.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -46,7 +47,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "public/styles/global.scss"
+        "public/styles/global.scss",
+        "../node_modules/hover.css/scss/hover.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

@@ -1,0 +1,91 @@
+<section id="mpsv">
+	<div class="mp-services-header types">
+		<div class="container align-center">
+			<h1>Catalog Type 1</h1>
+		</div>
+	</div>
+
+	<div class="mp-services-body-1">
+		<h1>SERVICES 1</h1>
+		<p>Easy to give. Delicious to enjoy</p>
+
+		<ul class="mp-sbody-list mp-sbody-1-list">
+			<li class="d-flex" *ngFor="let item of list1">
+				<p>{{ item.name }}</p>
+				<span class="item-prices">
+					<del>{{ item.old_price | currency:'USD' }}</del>
+					$ 20.00
+				</span>
+			</li>
+		</ul>
+	</div>
+
+	<div class="hr-c"></div>
+
+	<div class="mp-services-body-2">
+		<h1>SERVICES 2</h1>
+		<p>Easy to give. Delicious to enjoy</p>
+
+		<div class="mp-services-body-2-2 multiple-list d-flex">
+			<ul class="mp-sbody-list mp-sbody-2-list list1">
+				<li class="d-flex" *ngFor="let item of list1">
+					<p>{{ item.name }}</p>
+					<span class="item-prices">
+						<del>{{ item.old_price | currency:'USD' }}</del>
+						$ 20.00
+					</span>
+				</li>
+			</ul>
+
+			<ul class="mp-sbody-list mp-sbody-2-list list2">
+				<li class="d-flex" *ngFor="let item of list1">
+					<p>{{ item.name }}</p>
+					<span class="item-prices">
+						<del>{{ item.old_price | currency:'USD' }}</del>
+						$ 20.00
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="hr-c"></div>
+
+	<div class="mp-services-body-3">
+		<h1>SERVICES 3</h1>
+		<p>Easy to give. Delicious to enjoy</p>
+
+		<div class="mp-services-body-3-3 multiple-list d-flex">
+			<ul class="mp-sbody-list mp-sbody-3-list list1">
+				<li class="d-flex" *ngFor="let item of list1">
+					<p>{{ item.name }}</p>
+					<span class="item-prices">
+						<del>{{ item.old_price | currency:'USD' }}</del>
+						$ 20.00
+					</span>
+				</li>
+			</ul>
+
+			<ul class="mp-sbody-list mp-sbody-3-list list2">
+				<li class="d-flex" *ngFor="let item of list1">
+					<p>{{ item.name }}</p>
+					<span class="item-prices">
+						<del>{{ item.old_price | currency:'USD' }}</del>
+						$ 20.00
+					</span>
+				</li>
+			</ul>
+
+			<ul class="mp-sbody-list mp-sbody-3-list list3">
+				<li class="d-flex" *ngFor="let item of list1">
+					<p>{{ item.name }}</p>
+					<span class="item-prices">
+						<del>{{ item.old_price | currency:'USD' }}</del>
+						$ 20.00
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</section>

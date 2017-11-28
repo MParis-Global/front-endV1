@@ -1,0 +1,218 @@
+@import '../../../public/styles/global.scss';
+
+#mpab {
+	.mp-about-header {
+		position: relative;
+		width: 100%;
+		height: 250px;
+		background-image: url('http://dtspalab.wpengine.com/wp-content/themes/spalab/images/breadcrumb-default-bg.jpg');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		box-shadow: inset 0 -30px 40px 0px rgba(0,0,0,0.8);
+		-moz-box-shadow: inset 0 -30px 40px 0px rgba(0,0,0,0.8);
+		-webkit-box-shadow: inset 0 -30px 40px 0px rgba(0,0,0,0.8); 
+		-ms-box-shadow: inset 0 -30px 40px 0px rgba(0,0,0,0.8);
+
+		.container {
+			width: 1000px;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			z-index: 1;
+
+			h1 {
+				font-family: 'Lato';
+				font-weight: bold;
+				font-size: 42px;
+				color: #fff;
+				left: 0;
+				z-index: 1;
+			}
+
+			p {
+				color: #fff;
+				font-family: Raleway;
+				font-size: 21px;
+				font-weight: 400;
+			}
+		}
+	}
+
+	.mp-about-header::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)) 25%, color-stop(40%, rgba(0,0,0,0.1)), to(rgba(255, 255, 255, 0)));
+		background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.1) 40%, rgba(255, 255, 255, 0));
+		background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.1) 40%, rgba(255, 255, 255, 0));
+		background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.1) 40%, rgba(255, 255, 255, 0));
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.1) 40%, rgba(255, 255, 255, 0));
+	}
+
+	.mp-about-header::after {
+		background-color: rgba(91, 54, 113, 0.6);
+		content: "";
+		float: left;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+	}
+
+	.mp-about-body-1, .mp-about-body-2 {
+		width: 1000px;
+		margin: 0 auto;
+		padding: 80px 20px;
+		box-sizing: border-box;
+
+		.neoqi {
+			margin-bottom: 30px;
+		}
+
+		h2 {
+			align-items: center;
+			white-space: pre;
+			color: #222;
+			text-transform: uppercase;
+			
+			span {
+				font-family: 'Raleway';
+				font-weight: 600;
+				margin-right: 20px;
+			}			
+
+			.rail {
+				width: 100%;
+				border-bottom: 1px solid #e5e5e5;
+			}
+		}
+
+		.mp-about-body-presentation {
+			width: 100%;
+			border-bottom-left-radius: 4px;
+			border-bottom-right-radius: 4px;
+
+			.about-presentation-product {
+				width: 400px;
+				background-color: #F5F5F5;
+
+				img {
+					width: inherit;
+				}
+
+				.product-info {
+					margin: 10px;
+					padding: 10px;
+					border: 1px dashed #E0DDD8;
+
+					h3 {
+						padding: 15px 0;
+						font-family: Raleway;
+						font-weight: 500;
+						font-size: 24px;
+						color: #222;
+					}
+
+					ul {
+						margin-top: 0;
+
+						li {
+							position: relative;
+							font-family: 'Raleway';
+							font-weight: normal;
+							color: #999;
+							padding-left: 15px;
+							line-height: 24px;
+							margin-bottom: 8px;
+						}
+
+						li:before {
+							content: "\f0da";
+							font-size: 16px;
+							font-family: FontAwesome;
+							font-style: normal;
+							color: #808080;
+							font-weight: normal;
+							text-decoration: inherit;
+							position: absolute;
+							top: 0;
+							left: 0;
+						}
+					}
+
+					.mp-product-list {
+						box-sizing: border-box;
+
+						li {
+							align-items: center;
+							padding: 15px 0px;
+							border-bottom: 1px solid #e5e5e5;
+
+							p {
+								font-family: 'Lato';
+								font-weight: 500;
+								font-size: 16px;
+								color: #808080;
+							}
+
+							.item-prices {
+								margin-left: auto;
+								font-family: 'Lato';
+								font-weight: 500;
+
+								del {
+									margin-right: 5px;
+									color: #bc5050;
+								}
+								color: #808080;
+							}
+						}
+
+						li::before {
+							content: none;
+						}
+					}
+				}
+			}
+
+			.about-presentation-history {
+				width: auto;
+				background-color: #fff;
+				margin-left: 25px;
+				overflow: hidden;
+
+				p {
+					font-family: Raleway, sans-serif;
+					font-weight: 600;
+					color: #868686;
+					line-height: 26px;
+					margin-bottom: 30px;
+				}
+				
+				video {
+					width: auto !important;
+					height: 300px;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+
+	.mp-about-body-2 {
+		.mp-about-body-presentation {
+			flex-direction: row-reverse;
+		}
+
+		.about-presentation-history { 
+			margin-left: 0px !important;
+			margin-right: 25px;
+		}
+	}
+
+}

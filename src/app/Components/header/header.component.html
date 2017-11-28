@@ -1,3 +1,20 @@
-<p>
-  header works!
-</p>
+<header id="mphead">
+	<div class="mp-header-logo d-flex-center">
+		<a [routerLink]="['/']" class="d-flex figure">
+			<img src="public/images/logo/logo.png" alt="company-logo">
+			<div class="logo-name">
+				<h2>Paris</h2>
+				<p>Beauty Institute</p>
+			</div>
+		</a>
+
+		<ul class="d-flex">
+			<a [ngClass]="{ active : isActive === 1 }" (click)="switchActive(1)" [routerLink]="['/']">Trang chủ</a>
+			<a [ngClass]="{ active : isActive === 2 }" (click)="switchActive(2)" [routerLink]="['/services']">Dịch vụ</a>
+			<a [ngClass]="{ active : isActive === 3 }" (click)="switchActive(3)" [routerLink]="['/about/products']">Giới thiệu sản phẩm</a>
+			<a [ngClass]="{ active : isActive === 4 }" (click)="switchActive(4)" [routerLink]="['/about/mparis-global']">Giới thiêu về M.Paris Global</a>
+<!-- 			<a [ngClass]="{ active : isActive === 5 }" (click)="switchActive(5)" [routerLink]="['/blog']">Blog</a>
+ -->			<a [ngClass]="{ active : isActive === 5}" (click)="switchActive(5)" [routerLink]="['/contact']">Liên hệ</a>
+		</ul>
+	</div>
+</header>

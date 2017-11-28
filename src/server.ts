@@ -18,19 +18,26 @@ const app = express();
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const template = readFileSync(join(DIST_FOLDER, 'browser', 'index.html')).toString();
-const { AppServerModuleNgFactory } = require('main.server');
+const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('main.server');
 
 // Express Engine
 import { ngExpressEngine } from '@nguniversal/express-engine';
 // Import module map for lazy loading
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 
-app.engine('html', (_, options, callback) => {
-	const opts = { document: template, url: options.req.url };
+// app.engine('html', (_, options, callback) => {
+// 	const opts = { document: template, url: options.req.url };
 
-	renderModuleFactory(AppServerModuleNgFactory, opts)
-	.then(html => callback(null, html));
-});
+// 	renderModuleFactory(AppServerModuleNgFactory, opts)
+// 	.then(html => callback(null, html));
+// });
+
+app.engine('html', ngExpressEngine({
+	bootstrap: AppServerModuleNgFactory,
+	providers: [
+	provideModuleMap(LAZY_MODULE_MAP)
+	]
+}));
 
 // app.set('view engine', 'html');
 // app.set('views', join(DIST_FOLDER, 'browser'));

@@ -1,0 +1,231 @@
+@import '../../../public/styles/global.scss';
+
+#mpabmp {
+	.mp-aboutmp-header {
+		position: relative;
+		width: 100%;
+		height: 250px;
+		background-image: url('http://dtspalab.wpengine.com/wp-content/themes/spalab/images/breadcrumb-default-bg.jpg');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		box-shadow: inset 0 -30px 40px 0px rgba(0,0,0,0.8);
+		-moz-box-shadow: inset 0 -30px 40px 0px rgba(0,0,0,0.8);
+		-webkit-box-shadow: inset 0 -30px 40px 0px rgba(0,0,0,0.8); 
+		-ms-box-shadow: inset 0 -30px 40px 0px rgba(0,0,0,0.8);
+
+		.container {
+			width: 1000px;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			z-index: 1;
+
+			h1 {
+				font-family: 'Lato';
+				font-weight: bold;
+				font-size: 42px;
+				color: #fff;
+				left: 0;
+				z-index: 1;
+			}
+
+			p {
+				color: #fff;
+				font-family: Raleway;
+				font-size: 21px;
+				font-weight: 400;
+			}
+		}
+	}
+
+	.mp-aboutmp-header::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.2)) 25%, color-stop(40%, rgba(0,0,0,0.1)), to(rgba(255, 255, 255, 0)));
+		background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.1) 40%, rgba(255, 255, 255, 0));
+		background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.1) 40%, rgba(255, 255, 255, 0));
+		background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.1) 40%, rgba(255, 255, 255, 0));
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.1) 40%, rgba(255, 255, 255, 0));
+	}
+
+	.mp-aboutmp-header::after {
+		background-color: rgba(91, 54, 113, 0.6);
+		content: "";
+		float: left;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+	}
+
+	.mp-aboutmp-body {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 120px 10px 100px 10px;
+		box-sizing: border-box;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.mp-aboutmp-body-category {
+			text-align: center;
+			margin: 0 10px;
+			max-width: 270px;
+   			margin-bottom: 30px;
+
+			span {
+				font-size: 58px;
+				color: #71468B;
+				margin-bottom: 20px;
+			}
+
+			h4 {
+				font-size: 18px;
+				color: #4D4D4D;
+				font-family: 'Raleway';
+				font-weight: 600;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+			}
+
+			p {
+				font-size: 14px;
+				color: #808080;
+				font-family: 'Raleway';
+				font-weight: 500;
+				line-height: 25px;
+			}
+		}
+	}
+
+	.hr-line {
+		max-width: 1200px;
+		height: 10px;
+		margin: 0 auto;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-image: url(http://dtspalab.wpengine.com/wp-content/plugins/designthemes-core-features/shortcodes/images/introtext-border-top.png);
+	}
+
+	.hr-line1 {
+		max-width: 1200px;
+		height: 120px;
+		margin: 0 auto;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-image: url(http://dtspalab.wpengine.com/wp-content/plugins/designthemes-core-features/shortcodes/images/intro-text-border-bottom.png);
+		padding-bottom: 50px;
+	}
+
+	.hr-line-extend {
+		margin-bottom: 30px;
+	}
+
+	.mp-aboutmp-gallery {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 50px 10px 80px 50px;
+		box-sizing: border-box;
+
+		h2 {
+			font-size: 28px;
+			font-family: 'Raleway';
+			color: #181818;
+			margin-bottom: 40px;
+		}
+
+		.gallery-pictures {
+			flex-wrap: wrap;
+
+			.picture {
+				height: 135px;
+				width: 230px;
+				background-image: url('/public/images/mparis-pictures/picture1.jpg');
+				background-size: 100%;
+				background-position: center center;
+				margin: 15px 30px 15px 0;
+				cursor: pointer;
+			}
+
+			.picture:hover {
+				background-size: 150%;
+				-webkit-filter: brightness(30%);
+				-moz-filter: brightness(30%);
+				-o-filter: brightness(30%);
+				-ms-filter: brightness(30%);
+				filter: brightness(30%);
+			}
+		}
+	}
+
+	.mp-aboutmp-text {
+		max-width: 1200px;
+		margin: 0 auto;
+		text-align: center;
+
+		h2 {
+			color: #181818;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+			font-family: 'Raleway';
+		}
+
+		h3 {
+			color: #a0a0a1;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			font-family: 'Raleway';
+		}
+	}
+}
+
+/******************** MOBILE ****************************/
+@media only screen and (max-width: 736px) {
+	#mpabmp {
+		.mp-aboutmp-body {
+			padding: 50px 10px;
+		}
+
+		.mp-aboutmp-gallery {
+			text-align: center ;
+			padding: 50px 10px 80px 10px;
+
+			h2 {
+				text-align: center;
+			}
+
+			.gallery-pictures {
+				flex-wrap: wrap;
+				justify-content: center;
+
+				.picture {
+					margin: 15px;
+				}
+			}
+		}
+
+		.mp-aboutmp-text {
+			padding: 0 10px;
+			
+			h2 {
+				font-size: 21px;
+				margin-bottom: 10px;
+			}
+
+			h3 {
+				font-size: 16px;
+			}
+		}
+
+		.hr-line1 {
+			height: auto;
+			padding-bottom: 25px;
+		}
+	}
+}

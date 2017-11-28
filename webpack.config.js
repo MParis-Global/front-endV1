@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 var nodeExternals = require('webpack-node-externals');
 
 module.exports = {
@@ -12,14 +13,21 @@ module.exports = {
 		}
 	},
 	target: 'node',
-	externals: [nodeExternals()],
+	externals: [nodeExternals({
+			whitelist: [
+				/^@agm\/core/
+			]
+		})],
+	node: {
+    	__dirname: true
+  	}	,
 	output: {
 		path: path.join(__dirname, 'dist'),
 		filename: '[name].js'
 	},
 	module: {
 		rules: [
-		{ test: /\.ts$/, loader: 'ts-loader' }
+			{ test: /\.ts$/, loader: 'ts-loader' }
 		]
 	}
 }
