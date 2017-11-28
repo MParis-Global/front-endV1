@@ -41,3 +41,4 @@ testem.log
 # System Files
 Thumbs.db
 **/.DS_Store
+**/.mp4
