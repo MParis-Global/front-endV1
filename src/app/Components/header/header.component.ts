@@ -1,16 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+
+/* Animations */
+import { slideToggle } from '../../Animations/landing-animation';
 
 @Component({
 	selector: 'app-header',
 	templateUrl: './header.component.html',
 	styleUrls: [
 		'./header.component.scss',
-	]
+	],
+	animations: [slideToggle]
 })
 export class HeaderComponent implements OnInit {
 
-	isActive: number = 1
+	isActive 	: number = 1
+	slideState 	: string = 'initial'
 
 	constructor(private router: Router) { 
 		this.getRoute();
@@ -40,5 +45,10 @@ export class HeaderComponent implements OnInit {
 
 	switchActive(index) {
 		this.isActive = index;
+	}
+
+	slideDown() {
+		this.slideState = 'slideDown'
+		console.log(this.slideState);
 	}
 }

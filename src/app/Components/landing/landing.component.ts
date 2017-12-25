@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+/* Animations */
+
 @Component({
 	selector: 'app-landing',
 	templateUrl: './landing.component.html',

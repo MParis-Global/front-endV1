@@ -1,6 +1,7 @@
 /* Core Module */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /* Modules */
 import { HeaderModule } from './header/header.module';
@@ -26,6 +27,7 @@ import { AgmCoreModule } from '@agm/core';
 		BrowserModule.withServerTransition({ appId: 'MParis' }),
 		APP_ROUTES,
 		HeaderModule,
+		BrowserAnimationsModule,
 		AgmCoreModule.forRoot({
 			apiKey: 'AIzaSyAljfwWIIw8n2LhC2gZdRLC3JKCS1Y-V8M'
 		})

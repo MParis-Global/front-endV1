@@ -1,4 +1,4 @@
-<header id="mphead">
+<header id="mphead" [@slide]="stateSlide === 'initial'">
 	<div class="mp-header-logo d-flex-center">
 		<a [routerLink]="['/']" class="d-flex figure">
 			<img src="public/images/logo/logo.png" alt="company-logo">
@@ -8,13 +8,18 @@
 			</div>
 		</a>
 
-		<ul class="d-flex">
+		<ul>
 			<a [ngClass]="{ active : isActive === 1 }" (click)="switchActive(1)" [routerLink]="['/']">Trang chủ</a>
 			<a [ngClass]="{ active : isActive === 2 }" (click)="switchActive(2)" [routerLink]="['/services']">Dịch vụ</a>
 			<a [ngClass]="{ active : isActive === 3 }" (click)="switchActive(3)" [routerLink]="['/about/products']">Giới thiệu sản phẩm</a>
 			<a [ngClass]="{ active : isActive === 4 }" (click)="switchActive(4)" [routerLink]="['/about/mparis-global']">Giới thiêu về M.Paris Global</a>
-<!-- 			<a [ngClass]="{ active : isActive === 5 }" (click)="switchActive(5)" [routerLink]="['/blog']">Blog</a>
- -->			<a [ngClass]="{ active : isActive === 5}" (click)="switchActive(5)" [routerLink]="['/contact']">Liên hệ</a>
+			<a [ngClass]="{ active : isActive === 5}" (click)="switchActive(5)" [routerLink]="['/contact']">Liên hệ</a>
 		</ul>
+
+		<div class="collapse-button transition-150" (click)="slideDown()">
+			<div class="trait-1 transition-150"></div>
+			<div class="trait-2 transition-150"></div>
+			<div class="trait-3 transition-150"></div>
+		</div>
 	</div>
 </header>
