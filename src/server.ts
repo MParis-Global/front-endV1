@@ -10,7 +10,7 @@ import { readFileSync } from 'fs';
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 
-const PORT = process.env.PORT || 80;
+const PORT = 80;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 
 // Express server
