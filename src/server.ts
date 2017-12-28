@@ -42,6 +42,8 @@ app.engine('html', ngExpressEngine({
 // app.set('view engine', 'html');
 // app.set('views', join(DIST_FOLDER, 'browser'));
 
+app.use(require('express-force-domain')('http://www.mparis-spa.com') );
+
 app.set('view engine', 'html');
 app.set('views', 'src')
 

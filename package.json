@@ -30,6 +30,7 @@
     "@nguniversal/module-map-ngfactory-loader": "^5.0.0-beta.5",
     "core-js": "^2.4.1",
     "express": "^4.16.2",
+    "express-force-domain": "0.0.6",
     "hover.css": "^2.2.1",
     "nodemon": "^1.14.3",
     "path": "^0.12.7",
