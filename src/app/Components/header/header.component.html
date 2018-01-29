@@ -8,10 +8,16 @@
 			</div>
 		</a>
 
-		<ul>
+		<ul *ngIf="openNav" [ngStyle]="{'display': openNav === true ? 'block' : 'block' }">
 			<a [ngClass]="{ active : isActive === 1 }" (click)="switchActive(1)" [routerLink]="['/']">Trang chủ</a>
 			<a [ngClass]="{ active : isActive === 2 }" (click)="switchActive(2)" [routerLink]="['/services']">Dịch vụ</a>
-			<a [ngClass]="{ active : isActive === 3 }" (click)="switchActive(3)" [routerLink]="['/about/products']">Giới thiệu sản phẩm</a>
+			<a class="products" [ngClass]="{ active : isActive === 3 }">Giới thiệu sản phẩm
+				<ul class="products-ul">
+					<li class="product-li" (click)="switchActive(3)" [routerLink]="['/about/products']">NeoQi</li>
+					<li class="product-li">Silhouet-Tone</li>
+					<li class="product-li">Esti France</li>
+				</ul>
+			</a>
 			<a [ngClass]="{ active : isActive === 4 }" (click)="switchActive(4)" [routerLink]="['/about/mparis-global']">Giới thiêu về M.Paris Global</a>
 			<a [ngClass]="{ active : isActive === 5}" (click)="switchActive(5)" [routerLink]="['/contact']">Liên hệ</a>
 		</ul>

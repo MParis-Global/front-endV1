@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 
 /* Animations */
@@ -16,12 +17,26 @@ export class HeaderComponent implements OnInit {
 
 	isActive 	: number = 1
 	slideState 	: string = 'initial'
+	openNav 	: boolean = false
+	// mobile 		: boolean = false
 
-	constructor(private router: Router) { 
+	constructor(private router: Router,
+			@Inject(PLATFORM_ID) private platformId: Object) { 
 		this.getRoute();
 	}
 
 	ngOnInit() {
+		if (isPlatformBrowser(this.platformId)) {
+	        // Client-only code: use localStorage
+	        if ((window.innerWidth) < 736)
+				this.openNav = false
+			else
+				this.openNav = true
+	    }
+	    if (isPlatformServer(this.platformId)) {
+	        // Server-only code: do nothing
+	        this.openNav = true
+    	}
 	}
 
 	getRoute() {
@@ -44,11 +59,12 @@ export class HeaderComponent implements OnInit {
 	}
 
 	switchActive(index) {
+		// this.openNav = false;
 		this.isActive = index;
 	}
 
 	slideDown() {
-		this.slideState = 'slideDown'
-		console.log(this.slideState);
+		this.openNav = this.openNav === true ? false: true;
 	}
+
 }

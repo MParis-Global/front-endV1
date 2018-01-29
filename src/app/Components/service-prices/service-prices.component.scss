@@ -22,7 +22,7 @@
 			z-index: 1;
 
 			h1 {
-				font-family: 'Raleway';
+				font-family: 'Helvetica';
 				font-weight: 600;
 				font-size: 42px;
 				color: #fff;
@@ -71,8 +71,16 @@
 		text-align: center;
     	padding: 50px;
 
+    	h3 {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 21px;
+			color: #787878;
+			font-weight: 600;
+			margin-bottom: 15px;
+		}
+
 		h1 {
-			font-family: 'Lato';
+			font-family: 'Arial';
 			font-size: 32px;
 			font-weight: 300;
 			margin: 0;
@@ -100,7 +108,7 @@
 				border-bottom: 1px solid #e5e5e5;
 
 				p {
-					font-family: 'Lato';
+					font-family: 'Arial';
 					font-weight: 500;
 					font-size: 16px;
 					color: #808080;
@@ -108,7 +116,7 @@
 
 				.item-prices {
 					margin-left: auto;
-					font-family: 'Lato';
+					font-family: 'Arial';
 					font-weight: 500;
 
 					del {
@@ -148,6 +156,10 @@
 
 	.mp-services-body-3 {
 		padding-bottom: 100px;
+
+		ul {
+			width: 50%;
+		}
 	}
 	
 }

@@ -1,20 +1,32 @@
 <section id="mpsv">
 	<div class="mp-services-header types">
 		<div class="container align-center">
-			<h1>Catalog Type 1</h1>
+			<h1>Bảng giá & Dịch vụ</h1>
 		</div>
 	</div>
 
 	<div class="mp-services-body-1">
-		<h1>SERVICES 1</h1>
+		<h1>Skin care - Chăm sóc & Điều trị da </h1>
 		<p>Easy to give. Delicious to enjoy</p>
 
 		<ul class="mp-sbody-list mp-sbody-1-list">
+			<h3>Chăm sóc da mặt</h3>
 			<li class="d-flex" *ngFor="let item of list1">
 				<p>{{ item.name }}</p>
 				<span class="item-prices">
-					<del>{{ item.old_price | currency:'USD' }}</del>
-					$ 20.00
+<!-- 					<del>{{ item.old_price | currency:'USD' }}</del>
+ -->					{{ item.price }} VND
+				</span>
+			</li>
+		</ul>
+
+		<ul class="mp-sbody-list mp-sbody-1-list">
+			<h3>Điều trị da công nghệ cao</h3>
+			<li class="d-flex" *ngFor="let item of list12">
+				<p>{{ item.name }}</p>
+				<span class="item-prices">
+<!-- 					<del>{{ item.old_price | currency:'USD' }}</del>
+ -->					{{ item.price }} VND
 				</span>
 			</li>
 		</ul>
@@ -23,26 +35,28 @@
 	<div class="hr-c"></div>
 
 	<div class="mp-services-body-2">
-		<h1>SERVICES 2</h1>
+		<h1>Body care - Chăm sóc nuôi dưỡng toàn thân</h1>
 		<p>Easy to give. Delicious to enjoy</p>
 
 		<div class="mp-services-body-2-2 multiple-list d-flex">
 			<ul class="mp-sbody-list mp-sbody-2-list list1">
-				<li class="d-flex" *ngFor="let item of list1">
+				<h3>Điều trị chăm sóc toàn diện & phục hồi cấu kết </h3>
+				<li class="d-flex" *ngFor="let item of list2">
 					<p>{{ item.name }}</p>
 					<span class="item-prices">
-						<del>{{ item.old_price | currency:'USD' }}</del>
-						$ 20.00
+<!-- 						<del>{{ item.old_price | currency:'USD' }}</del>
+ -->						{{ item.price }} VND
 					</span>
 				</li>
 			</ul>
 
 			<ul class="mp-sbody-list mp-sbody-2-list list2">
-				<li class="d-flex" *ngFor="let item of list1">
+				<h3>Điều trị & thư giãn bằng phi thuyền</h3>
+				<li class="d-flex" *ngFor="let item of list22">
 					<p>{{ item.name }}</p>
 					<span class="item-prices">
-						<del>{{ item.old_price | currency:'USD' }}</del>
-						$ 20.00
+<!-- 						<del>{{ item.old_price | currency:'USD' }}</del>
+ -->						{{ item.price }} VND
 					</span>
 				</li>
 			</ul>
@@ -52,36 +66,50 @@
 	<div class="hr-c"></div>
 
 	<div class="mp-services-body-3">
-		<h1>SERVICES 3</h1>
+		<h1>Beauty care - Làm đẹp toàn diện</h1>
 		<p>Easy to give. Delicious to enjoy</p>
 
 		<div class="mp-services-body-3-3 multiple-list d-flex">
 			<ul class="mp-sbody-list mp-sbody-3-list list1">
-				<li class="d-flex" *ngFor="let item of list1">
+				<h3>Trang điểm</h3>
+				<li class="d-flex" *ngFor="let item of list31">
 					<p>{{ item.name }}</p>
 					<span class="item-prices">
-						<del>{{ item.old_price | currency:'USD' }}</del>
-						$ 20.00
+<!-- 						<del>{{ item.old_price | currency:'USD' }}</del>
+ -->						{{ item.price }} VND
 					</span>
 				</li>
 			</ul>
 
 			<ul class="mp-sbody-list mp-sbody-3-list list2">
-				<li class="d-flex" *ngFor="let item of list1">
+				<h3>Xăm thẩm mỹ - xoá xăm</h3>
+				<li class="d-flex" *ngFor="let item of list32">
 					<p>{{ item.name }}</p>
 					<span class="item-prices">
-						<del>{{ item.old_price | currency:'USD' }}</del>
-						$ 20.00
+<!-- 						<del>{{ item.old_price | currency:'USD' }}</del>
+ -->						{{ item.price }} VND
 					</span>
 				</li>
 			</ul>
 
 			<ul class="mp-sbody-list mp-sbody-3-list list3">
-				<li class="d-flex" *ngFor="let item of list1">
+				<h3>Tẩy lông tự nhiên</h3>
+				<li class="d-flex" *ngFor="let item of list33">
 					<p>{{ item.name }}</p>
 					<span class="item-prices">
-						<del>{{ item.old_price | currency:'USD' }}</del>
-						$ 20.00
+<!-- 						<del>{{ item.old_price | currency:'USD' }}</del>
+ -->						{{ item.price }} VND
+					</span>
+				</li>
+			</ul>
+
+			<ul class="mp-sbody-list mp-sbody-3-list list3">
+				<h3>Tẩy lông vĩnh viễn</h3>
+				<li class="d-flex" *ngFor="let item of list34">
+					<p>{{ item.name }}</p>
+					<span class="item-prices">
+<!-- 						<del>{{ item.old_price | currency:'USD' }}</del>
+ -->						{{ item.price }} VND
 					</span>
 				</li>
 			</ul>

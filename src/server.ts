@@ -6,6 +6,8 @@ import { enableProdMode } from '@angular/core'
 import * as express from 'express';
 import { join } from 'path';
 import { readFileSync } from 'fs';
+import { compression } from 'compression';
+
 
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
@@ -42,7 +44,7 @@ app.engine('html', ngExpressEngine({
 // app.set('view engine', 'html');
 // app.set('views', join(DIST_FOLDER, 'browser'));
 
-app.use(require('express-force-domain')('http://www.mparis-spa.com') );
+// app.use(require('express-force-domain')('http://www.mparis-spa.com') );
 
 app.set('view engine', 'html');
 app.set('views', 'src')

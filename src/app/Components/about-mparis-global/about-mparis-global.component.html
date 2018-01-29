@@ -1,31 +1,31 @@
 <section id="mpabmp">
 	<div class="mp-aboutmp-header types">
 		<div class="container align-center">
-			<h1>About M.Paris Global</h1>
-			<p>Presentation of our exclusif spa equipments and cosmetic products from Europe</p>
+			<h1>Giới thiệu chung về MParis</h1>
+			<p>Trung tâm thẩm mỹ và spa cao cấp</p>
 		</div>
 	</div>
 
 	<div class="mp-aboutmp-body d-flex">
 		<div class="mp-aboutmp-body-category">
 			<span class="fa fa-pagelines"></span>
-			<h4>Beauty care</h4>
-			<p>Nunc at pretium est curabitur commodo leac est venenatis egestas sed aliquet auguevelit.</p>
+			<h4>Beauty care <br /> - <br />Làm đẹp toàn diện</h4>
+			<p>Trung tâm spa MParis có tất cả các dịch vụ làm đẹp như trang điểm, xâm thẩm mỹ, tẩy lông và làm móng với đội ngũ nhân nhiên có chứng chỉ được cấp từ viện thẩm mỹ Catherine Sertin Paris, Pháp</p>
 		</div>
 		<div class="mp-aboutmp-body-category">
 			<span class="fa fa-magic"></span>
-			<h4>Spa & Cosmetic</h4>
-			<p>Nunc at pretium est curabitur commodo leac est venenatis egestas sed aliquet auguevelit.</p>
+			<h4>Spa & Cosmetic <br /> - <br />Thẩm mỹ spa cao</h4>
+			<p>Tự hào là viện thẩm mỹ spa cao cấp tiêu chuẩn quốc tế, các loại mỹ phẩm và thiêt bị thẩm mỹ của MParis điều được cung cấp và có chứng chỉ từ Estonia Pháp, Canada.</p>
 		</div>
 		<div class="mp-aboutmp-body-category">
 			<span class="fa fa-coffee"></span>
-			<h4>Relax & Revive</h4>
-			<p>Nunc at pretium est curabitur commodo leac est venenatis egestas sed aliquet auguevelit.</p>
+			<h4>Relax & Revive <br /> - <br />Thư giãn & hồi sức</h4>
+			<p>MParis là nhà phân phối độc quyền những thiết bị spa thư giãn phục hồi sức khoẻ công nghệ cao - NeoQi đã có mặt trên 65 nước trên thế giới và -Silhouet-Tone đã có mặt hơn 100 năm trong nghành điều trị da đạt tiêu chuẩn hàng đầu quốc tế.</p>
 		</div>
 		<div class="mp-aboutmp-body-category">
 			<span class="fa fa-gift"></span>
-			<h4>Gifts</h4>
-			<p>Nunc at pretium est curabitur commodo leac est venenatis egestas sed aliquet auguevelit.</p>
+			<h4>Gifts<br /> - <br />Quà tặng - khuyến mãi</h4>
+			<p>Đến với MParis, các bạn sẽ được trải nghiệm những giây phút thư giản, không gian sang trọng với những chuyên viên tư vấn được đào tạo chuyên nghiệp, những phần quà mỹ phẩm cao cấp và những khuyến mãi đặ biệt.</p>
 		</div>
 	</div>
 
@@ -35,12 +35,8 @@
 		<h2>M.Paris Gallery</h2>
 
 		<div class="gallery-pictures d-flex">
-			<div class="picture transition-200"></div>
-			<div class="picture transition-200"></div>
-			<div class="picture transition-200"></div>
-			<div class="picture transition-200"></div>
-			<div class="picture transition-200"></div>
-			<div class="picture transition-200"></div>
+			<div *ngFor="let oPicture of openingPictures" class="picture transition-200" [ngStyle]="{ 'background-image': 'url(' + oPicture + ')'}">
+			</div>
 		</div>
 	</div>
 

@@ -4,6 +4,7 @@
 	background-color: #5A386F;
 	
 	.mp-header-logo {
+		position: relative;
 		max-width: 1200px;
 		margin: 0 auto;
 		justify-content: center;
@@ -70,10 +71,50 @@
 				transition: all 200ms linear;
 			}
 
+			.products {
+				position: relative;
+
+				ul {
+					display: none;
+					position: absolute;
+					left: 0;
+					z-index: 100000;
+					border: 1px solid #5A386F;
+					border-radius: 2px;
+					background-color: #5A386F;
+					margin-top: 10px;
+					padding: 8px 20px 8px 20px;
+
+					li {
+						display: block;
+						padding: 5px 25px;
+						border: 2px solid #5A386F;
+						border-radius: 18px;
+						text-transform: none;
+					}
+
+					li:focus {
+						outline: none;
+					}
+
+					.product-li:hover {
+						border: 2px solid #fff;
+					}
+				}
+			}
+
+			.products:hover {
+				ul {
+					display: block;
+				}
+			}
+
+
 			.active {
 				border: 2px solid #fff;
 				border-radius: 18px;
 			}
+
 
 			li:hover {
 				border: 2px solid #fff;
@@ -128,20 +169,24 @@
 		.mp-header-logo {
 			position: relative;
 			justify-content: left;
-			overflow: hidden;
+			overflow: none;
 
 			.figure {
 				margin-left: 35px;
 			}
 
 			ul {
-				display: block;
+				display: none;
 				position: absolute;
+				width: 100%;
 				right: 0;
 				top: 0;
-				padding-top: 60px;
+				padding-top: 30px;
+				padding-bottom: 35px;
+				margin-top: 70px;
 				z-index: 100;
 				text-align: right;
+				background-color: #5A386F;
 
 				a {
 					display: block;
