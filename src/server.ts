@@ -6,7 +6,7 @@ import { enableProdMode } from '@angular/core'
 import * as express from 'express';
 import { join } from 'path';
 import { readFileSync } from 'fs';
-import { compression } from 'compression';
+import * as compression from 'compression';
 
 
 // Faster server renders w/ Prod mode (dev mode never needed)
@@ -17,6 +17,8 @@ const DIST_FOLDER = join(process.cwd(), 'dist');
 
 // Express server
 const app = express();
+
+app.use(compression());
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const template = readFileSync(join(DIST_FOLDER, 'browser', 'index.html')).toString();
@@ -44,7 +46,7 @@ app.engine('html', ngExpressEngine({
 // app.set('view engine', 'html');
 // app.set('views', join(DIST_FOLDER, 'browser'));
 
-// app.use(require('express-force-domain')('http://www.mparis-spa.com') );
+app.use(require('express-force-domain')('http://www.mparis-spa.com') );
 
 app.set('view engine', 'html');
 app.set('views', 'src')
