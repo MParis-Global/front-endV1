@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AboutMparisGlobalComponent implements OnInit {
 
 	openingPictures: Object[] = [
-		'public/images/mparis-opening/IMG_03.JPG',
+		'public/images/mparis-opening/IMG_01.JPG',
 		'public/images/mparis-opening/IMG_02.JPG',
 		'public/images/mparis-opening/IMG_04.JPG',
 		// 'public/images/mparis-opening/IMG_05.JPG',
