@@ -351,6 +351,7 @@ hr {
 				width: inherit;
 				justify-content: center;
 				align-items: center;
+				flex-wrap: wrap;
 
 				img {
 					height: 100px;
@@ -498,5 +499,18 @@ hr {
 	.mp-landing-2, .mp-landing-3, .mp-landing-5 {
 
 		padding: 80px 10px 60px 10px;
+	}
+
+	.mp-landing-5 {
+
+		.ml5-products {
+			.ml5-product-1, .ml5-product-2, .ml5-product-3 {
+				.cosmetic-products {
+					.esti {
+						margin-right: 0;
+					}
+				}
+			}
+		}
 	}
 }
