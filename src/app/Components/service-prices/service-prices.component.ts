@@ -49,7 +49,7 @@ export class ServicePricesComponent implements OnInit {
 	list31: Object[] = [
 		{ name: 'Nhuộm mày', price: '449.000', old_price: '-20%' },
 		{ name: 'Uốn cong mi', price: '649.000', old_price: '-20%' },
-		{ name: 'Trang điểm ngày/đêm/dạ tiệc', price: '450.000', old_price: '-10%' },
+		{ name: 'Trang điểm ngày', price: '450.000', old_price: '-10%' },
 		{ name: 'Trang điểm đêm', price: '550.000', old_price: '-10%' },
 		{ name: 'Trang điểm dạ tiệc', price: '750.000', old_price: '-10%' },
 		{ name: 'Nối mi thường', price: '200.000', old_price: '-5%' },

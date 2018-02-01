@@ -111,15 +111,17 @@
 			box-sizing: border-box;
 
 			li {
-				align-items: center;
+				align-items: baseline;
 				padding: 15px 0px;
 				border-bottom: 1px solid #e5e5e5;
+				text-align: left;
 
 				p {
 					font-family: 'Arial';
 					font-weight: 500;
 					font-size: 16px;
 					color: #808080;
+					max-width: 200px;
 				}
 
 				.item-prices {
@@ -170,4 +172,26 @@
 		}*/
 	}
 	
+}
+
+/******************** MOBILE ****************************/
+@media only screen and (max-width: 736px) {
+	#mpsv {
+		.mp-services-body-1, .mp-services-body-2, .mp-services-body-3 {
+			padding: 50px 0 50px 0;
+
+			h1 {
+				padding: 0 20px;
+			}
+
+			.contact {
+				padding: 20px;
+			}
+
+			.mp-sbody-list {
+				padding: 40px 10px 20px 10px;
+				box-sizing: border-box;
+			}	
+		}
+	}
 }
