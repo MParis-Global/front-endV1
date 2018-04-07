@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from '../Components/about/about.component'
 
 /* Librairies */
-// import { MetaGuard } from '@ngx-meta/core';
 
 const routes: Routes = [
 	{ path: '', component: AboutComponent }

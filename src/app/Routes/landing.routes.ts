@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { LandingComponent } from '../Components/landing/landing.component'
 
 /* Librairies */
-// import { MetaGuard } from '@ngx-meta/core';
 
 const routes: Routes = [
 	{ path: '', component: LandingComponent }
